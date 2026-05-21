@@ -44,7 +44,7 @@ export default function Navbar() {
                 Bangladesh University
               </span>
               <span className="font-extrabold text-xl leading-none text-foreground tracking-tight">
-                BU E - LIBRARY
+                BU EL - LIBRARY
               </span>
             </div>
           </div>
@@ -70,9 +70,9 @@ export default function Navbar() {
 
           {/* 3. Actions (Search, Dark Mode, Sign In) */}
           <div className="flex items-center space-x-5">
-            <button className="text-muted-foreground hover:text-foreground transition-colors">
+            {/* <button className="text-muted-foreground hover:text-foreground transition-colors">
               <Search className="h-5 w-5" />
-            </button>
+            </button> */}
             <button className="text-muted-foreground hover:text-foreground transition-colors">
               <Moon className="h-5 w-5" />
             </button>
