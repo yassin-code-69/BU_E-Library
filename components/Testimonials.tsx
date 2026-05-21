@@ -26,15 +26,15 @@ export default function Testimonials() {
     <section className="py-16 relative z-20">
       <div className="text-center mb-12">
         <h2 className="text-3xl font-bold text-foreground mb-4">What Our Users Say</h2>
-        <div className="w-20 h-1 bg-[#6A1B29] mx-auto rounded-full"></div>
+        <div className="w-20 h-1 bg-[#6A1B29] dark:bg-primary mx-auto rounded-full"></div>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
         {testimonials.map((t, i) => (
-          <div key={i} className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow relative">
-            <Quote className="absolute top-6 right-8 text-gray-100 h-12 w-12" />
+          <div key={i} className="bg-white dark:bg-card p-8 rounded-2xl shadow-sm border border-gray-100 dark:border-border hover:shadow-md transition-shadow relative">
+            <Quote className="absolute top-6 right-8 text-gray-100 dark:text-muted/30 h-12 w-12" />
             <div className="flex items-center gap-4 mb-6">
-              <img src={t.image} alt={t.name} className="w-12 h-12 rounded-full bg-gray-100" />
+              <img src={t.image} alt={t.name} className="w-12 h-12 rounded-full bg-gray-100 dark:bg-muted" />
               <div>
                 <h4 className="font-bold text-foreground leading-none">{t.name}</h4>
                 <p className="text-xs text-muted-foreground mt-1">{t.role}</p>

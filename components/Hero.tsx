@@ -15,7 +15,7 @@ export default function Hero() {
           
           <h1 className="text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.1] mb-6">
             Knowledge <br /> Unlocks. <br />
-            <span className="text-[#6A1B29]">Future Empowered.</span>
+            <span className="text-[#6A1B29] dark:text-primary">Future Empowered.</span>
           </h1>
           
           <p className="text-base text-muted-foreground mb-8 max-w-lg leading-relaxed">
@@ -29,8 +29,8 @@ export default function Hero() {
               placeholder="Search by title, author, subject or keyword..." 
               className="border-0 shadow-none focus-visible:ring-0 text-base px-4 bg-transparent w-full"
             />
-            <Button className="rounded-full bg-[#6A1B29] hover:bg-[#52131f] w-12 h-12 flex items-center justify-center shrink-0 p-0">
-              <Search className="h-5 w-5 text-white" />
+            <Button className="rounded-full bg-[#6A1B29] hover:bg-[#52131f] dark:bg-primary dark:hover:bg-primary/90 w-12 h-12 flex items-center justify-center shrink-0 p-0 text-white dark:text-primary-foreground">
+              <Search className="h-5 w-5 text-white dark:text-inherit" />
             </Button>
           </div>
 
@@ -40,7 +40,7 @@ export default function Hero() {
             {["Machine Learning", "Data Science", "Psychology", "Business"].map((tag) => (
               <span 
                 key={tag} 
-                className="px-4 py-1.5 bg-white/80 border border-white/40 rounded-full text-muted-foreground font-semibold hover:bg-[#6A1B29] hover:text-white transition-all cursor-pointer shadow-sm"
+                className="px-4 py-1.5 bg-white/80 dark:bg-card/80 border border-white/40 dark:border-border/40 rounded-full text-muted-foreground font-semibold hover:bg-[#6A1B29] hover:text-white dark:hover:bg-primary dark:hover:text-primary-foreground transition-all cursor-pointer shadow-sm"
               >
                 {tag}
               </span>
@@ -51,8 +51,8 @@ export default function Hero() {
         {/* Right Column: Visuals */}
         <div className="relative w-full h-[500px] lg:h-[600px] flex items-center justify-center">
           <div className="absolute top-10 right-4 lg:right-0 bg-background/90 backdrop-blur-md border shadow-2xl rounded-2xl p-5 flex flex-col items-center justify-center z-20 animate-bounce" style={{ animationDuration: '4s' }}>
-            <div className="w-12 h-12 bg-[#f8eef0] rounded-lg flex items-center justify-center mb-2.5">
-              <Book className="h-7 w-7 text-[#6A1B29]" />
+            <div className="w-12 h-12 bg-[#f8eef0] dark:bg-muted rounded-lg flex items-center justify-center mb-2.5">
+              <Book className="h-7 w-7 text-[#6A1B29] dark:text-primary" />
             </div>
             <h3 className="font-extrabold text-2xl leading-none mb-1 text-foreground">250K+</h3>
             <p className="text-[11px] text-muted-foreground font-semibold uppercase text-center tracking-wider">Resources<br/>at your fingertips</p>

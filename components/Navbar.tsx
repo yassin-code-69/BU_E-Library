@@ -2,6 +2,8 @@ import Link from "next/link";
 import { Search, Moon } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
+import { ThemeToggle } from "@/components/ThemeToggle";
+
 export default function Navbar() {
   return (
     <nav className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
@@ -51,7 +53,7 @@ export default function Navbar() {
 
           {/* 2. Desktop Menu */}
           <div className="hidden md:flex space-x-8 items-center">
-            <Link href="/" className="text-sm font-semibold text-[#6A1B29] border-b-2 border-[#6A1B29] pb-1">
+            <Link href="/" className="text-sm font-semibold text-[#6A1B29] dark:text-primary border-b-2 border-[#6A1B29] dark:border-primary pb-1">
               Home
             </Link>
             <Link href="/explore" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors flex items-center gap-1">
@@ -73,11 +75,9 @@ export default function Navbar() {
             {/* <button className="text-muted-foreground hover:text-foreground transition-colors">
               <Search className="h-5 w-5" />
             </button> */}
-            <button className="text-muted-foreground hover:text-foreground transition-colors">
-              <Moon className="h-5 w-5" />
-            </button>
+            <ThemeToggle />
             {/* ডিজাইনের সেই মেরুন রঙের বাটন */}
-            <Button className="bg-[#6A1B29] hover:bg-[#52131f] text-white rounded-full px-8 py-5 text-sm font-medium">
+            <Button className="bg-[#6A1B29] hover:bg-[#52131f] dark:bg-primary dark:hover:bg-primary/90 text-white dark:text-primary-foreground rounded-full px-8 py-5 text-sm font-medium">
               Sign In
             </Button>
           </div>

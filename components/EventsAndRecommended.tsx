@@ -56,10 +56,10 @@ export default function EventsAndRecommended() {
       <div className="grid grid-cols-1 xl:grid-cols-3 gap-6 lg:gap-8 h-full">
         
         {/* Left Column: Upcoming Events */}
-        <div className="xl:col-span-2 bg-white rounded-2xl p-6 lg:p-8 shadow-sm border border-gray-100 flex flex-col h-full">
+        <div className="xl:col-span-2 bg-white dark:bg-card rounded-2xl p-6 lg:p-8 shadow-sm border border-gray-100 dark:border-border flex flex-col h-full">
           <div className="flex items-center justify-between mb-6">
             <h2 className="text-xl font-bold text-foreground">Upcoming Events</h2>
-            <Link href="/events" className="text-sm font-medium text-muted-foreground hover:text-[#6A1B29] transition-colors flex items-center gap-1">
+            <Link href="/events" className="text-sm font-medium text-muted-foreground hover:text-[#6A1B29] dark:hover:text-primary transition-colors flex items-center gap-1">
               View all <span className="text-[10px]">›</span>
             </Link>
           </div>
@@ -68,15 +68,15 @@ export default function EventsAndRecommended() {
             {events.map((event, index) => (
               <div 
                 key={index} 
-                className="flex items-center gap-5 p-3 sm:p-4 rounded-xl border border-transparent hover:border-gray-100 hover:bg-gray-50 transition-all duration-300 group cursor-pointer"
+                className="flex items-center gap-5 p-3 sm:p-4 rounded-xl border border-transparent hover:border-gray-100 dark:hover:border-border hover:bg-gray-50 dark:hover:bg-muted/50 transition-all duration-300 group cursor-pointer"
               >
-                <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-2xl bg-[#fcf3f4] flex flex-col items-center justify-center shrink-0 group-hover:bg-[#f6e4e7] transition-colors duration-300">
-                  <span className="text-[10px] font-bold text-[#6A1B29] leading-none mb-1">{event.month}</span>
-                  <span className="text-xl sm:text-2xl font-extrabold text-[#6A1B29] leading-none">{event.day}</span>
+                <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-2xl bg-[#fcf3f4] dark:bg-muted flex flex-col items-center justify-center shrink-0 group-hover:bg-[#f6e4e7] dark:group-hover:bg-muted/80 transition-colors duration-300">
+                  <span className="text-[10px] font-bold text-[#6A1B29] dark:text-primary leading-none mb-1">{event.month}</span>
+                  <span className="text-xl sm:text-2xl font-extrabold text-[#6A1B29] dark:text-primary leading-none">{event.day}</span>
                 </div>
                 
                 <div className="flex flex-col flex-grow">
-                  <h3 className="font-bold text-foreground text-[15px] sm:text-[16px] leading-snug mb-1 sm:mb-1.5 group-hover:text-[#6A1B29] transition-colors">
+                  <h3 className="font-bold text-foreground text-[15px] sm:text-[16px] leading-snug mb-1 sm:mb-1.5 group-hover:text-[#6A1B29] dark:group-hover:text-primary transition-colors">
                     {event.title}
                   </h3>
                   <div className="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-3 text-[11px] sm:text-[12px] text-muted-foreground/80 font-medium">
@@ -91,10 +91,10 @@ export default function EventsAndRecommended() {
         </div>
 
         {/* Right Column: Recommended For You */}
-        <div className="xl:col-span-1 bg-[#4a0e1c] rounded-2xl p-6 lg:p-8 shadow-lg flex flex-col h-full border border-[#3b0918]">
+        <div className="xl:col-span-1 bg-[#4a0e1c] dark:bg-card rounded-2xl p-6 lg:p-8 shadow-lg flex flex-col h-full border border-[#3b0918] dark:border-border">
           <div className="flex items-center justify-between mb-8">
-            <h2 className="text-lg font-bold text-white">Recommended For You</h2>
-            <Link href="/recommended" className="text-sm font-medium text-white/80 hover:text-white transition-colors flex items-center gap-1">
+            <h2 className="text-lg font-bold text-white dark:text-card-foreground">Recommended For You</h2>
+            <Link href="/recommended" className="text-sm font-medium text-white/80 dark:text-muted-foreground hover:text-white dark:hover:text-foreground transition-colors flex items-center gap-1">
               View all <span className="text-[10px]">›</span>
             </Link>
           </div>
@@ -104,7 +104,7 @@ export default function EventsAndRecommended() {
               <div key={index} className="flex gap-4 items-center cursor-pointer group">
                 
                 {/* ছবি দেখানোর জন্য এখানে পরিবর্তন করা হয়েছে */}
-                <div className="w-16 h-24 bg-[#2b0810] rounded-md shrink-0 shadow-md relative overflow-hidden group-hover:scale-105 transition-transform duration-300">
+                <div className="w-16 h-24 bg-[#2b0810] dark:bg-muted rounded-md shrink-0 shadow-md relative overflow-hidden group-hover:scale-105 transition-transform duration-300">
                   <Image 
                     src={book.image} 
                     alt={book.title}
@@ -115,22 +115,22 @@ export default function EventsAndRecommended() {
                 
                 <div className="flex-grow flex justify-between items-start gap-2">
                   <div className="flex flex-col">
-                    <h3 className="font-bold text-white text-[14px] leading-tight mb-1.5 line-clamp-2">{book.title}</h3>
-                    <p className="text-[11px] text-white/60">{book.author}</p>
+                    <h3 className="font-bold text-white dark:text-card-foreground text-[14px] leading-tight mb-1.5 line-clamp-2">{book.title}</h3>
+                    <p className="text-[11px] text-white/60 dark:text-muted-foreground">{book.author}</p>
                   </div>
                   
                   <div className="flex flex-col items-end gap-3 shrink-0">
-                    <span className="text-[9px] font-extrabold px-2 py-1 bg-white text-[#4a0e1c] rounded-full uppercase tracking-wider shadow-sm leading-none">
+                    <span className="text-[9px] font-extrabold px-2 py-1 bg-white dark:bg-primary text-[#4a0e1c] dark:text-primary-foreground rounded-full uppercase tracking-wider shadow-sm leading-none">
                       {book.format}
                     </span>
                     
                     <div className="flex items-center gap-1">
                       <div className="flex gap-[1px]">
                         {[...Array(5)].map((_, i) => (
-                          <Star key={i} className={`h-2.5 w-2.5 ${i < Math.floor(book.rating) ? 'fill-yellow-400 text-yellow-400' : 'fill-white/20 text-white/20'}`} />
+                          <Star key={i} className={`h-2.5 w-2.5 ${i < Math.floor(book.rating) ? 'fill-yellow-400 text-yellow-400' : 'fill-white/20 dark:fill-muted-foreground/30 text-white/20 dark:text-muted-foreground/30'}`} />
                         ))}
                       </div>
-                      <span className="text-[10px] text-white/90 font-bold ml-1 leading-none">{book.rating}</span>
+                      <span className="text-[10px] text-white/90 dark:text-card-foreground font-bold ml-1 leading-none">{book.rating}</span>
                     </div>
                   </div>
                 </div>

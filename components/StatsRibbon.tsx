@@ -12,23 +12,23 @@ export default function StatsRibbon() {
 
   return (
     <section className="py-6 relative z-20">
-      <div className="bg-[#5a1523] rounded-2xl p-5 md:p-6 shadow-md border border-[#6A1B29]">
+      <div className="bg-[#5a1523] dark:bg-card rounded-2xl p-5 md:p-6 shadow-md border border-[#6A1B29] dark:border-border">
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 lg:gap-4">
           
           {stats.map((stat, index) => (
             <div key={index} className="flex items-center gap-3 lg:justify-center">
               
               {/* Icon with circular transparent background */}
-              <div className="w-11 h-11 rounded-full bg-white/5 flex items-center justify-center text-white shrink-0 border border-white/5">
+              <div className="w-11 h-11 rounded-full bg-white/5 dark:bg-muted/50 flex items-center justify-center text-white dark:text-card-foreground shrink-0 border border-white/5 dark:border-border/50">
                 {stat.icon}
               </div>
               
               {/* Text Container */}
               <div className="flex flex-col">
-                <h3 className="text-white text-[17px] font-bold leading-tight">
+                <h3 className="text-white dark:text-card-foreground text-[17px] font-bold leading-tight">
                   {stat.count}
                 </h3>
-                <p className="text-white/70 text-[11px] font-medium tracking-wide">
+                <p className="text-white/70 dark:text-muted-foreground text-[11px] font-medium tracking-wide">
                   {stat.label}
                 </p>
               </div>

@@ -10,7 +10,7 @@ import Testimonials from "@/components/Testimonials";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-[#fff0f1]">
+    <main className="min-h-screen bg-[#fff0f1] dark:bg-background">
       <Navbar />
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

@@ -18,7 +18,7 @@ export default function Categories() {
         <div className="lg:col-span-1">
           <h2 className="text-xl font-bold text-foreground mb-6">Continue Reading</h2>
           
-          <div className="bg-white rounded-2xl p-5 border border-gray-100 shadow-sm flex items-center gap-4 hover:shadow-md transition-all">
+          <div className="bg-white dark:bg-card rounded-2xl p-5 border border-gray-100 dark:border-border shadow-sm flex items-center gap-4 hover:shadow-md transition-all">
             {/* Book Cover */}
             {/* <div className="w-20 h-28 bg-gray-900 rounded-lg shrink-0 flex items-center justify-center text-white text-[10px] text-center p-2 shadow-inner">
               {/* ছবি অ্যাড করলে এখানে img ট্যাগ বসাবে */}
@@ -47,12 +47,12 @@ export default function Categories() {
                   <span>60% Complete</span>
                   <span>60%</span>
                 </div>
-                <div className="w-full bg-gray-100 rounded-full h-1.5">
-                  <div className="bg-[#6A1B29] h-1.5 rounded-full" style={{ width: "60%" }}></div>
+                <div className="w-full bg-gray-100 dark:bg-muted rounded-full h-1.5">
+                  <div className="bg-[#6A1B29] dark:bg-primary h-1.5 rounded-full" style={{ width: "60%" }}></div>
                 </div>
               </div>
               
-              <Button className="w-full bg-[#6A1B29] hover:bg-[#52131f] text-white rounded-lg h-8 text-xs font-semibold mt-2">
+              <Button className="w-full bg-[#6A1B29] hover:bg-[#52131f] dark:bg-primary dark:hover:bg-primary/90 text-white dark:text-primary-foreground rounded-lg h-8 text-xs font-semibold mt-2">
                 Resume Reading
               </Button>
             </div>
@@ -67,10 +67,10 @@ export default function Categories() {
             {categories.map((cat, index) => (
               <div 
                 key={index} 
-                className="bg-white rounded-2xl p-5 border border-gray-100 shadow-sm flex flex-col items-center justify-center text-center hover:shadow-md hover:-translate-y-1 transition-all duration-300 cursor-pointer group"
+                className="bg-white dark:bg-card rounded-2xl p-5 border border-gray-100 dark:border-border shadow-sm flex flex-col items-center justify-center text-center hover:shadow-md hover:-translate-y-1 transition-all duration-300 cursor-pointer group"
               >
                 {/* Icon Background */}
-                <div className={`w-12 h-12 rounded-full ${cat.bg} flex items-center justify-center mb-3 group-hover:scale-110 transition-transform`}>
+                <div className={`w-12 h-12 rounded-full ${cat.bg} dark:bg-muted flex items-center justify-center mb-3 group-hover:scale-110 transition-transform`}>
                   {cat.icon}
                 </div>
                 <h4 className="font-bold text-foreground text-[13px] leading-snug mb-1">{cat.name}</h4>
