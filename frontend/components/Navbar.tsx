@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Search, Moon } from "lucide-react";
+
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import { ThemeToggle } from "@/components/ThemeToggle";

@@ -34,6 +34,7 @@ export default function Testimonials() {
           <div key={i} className="bg-white dark:bg-card p-8 rounded-2xl shadow-sm border border-gray-100 dark:border-border hover:shadow-md transition-shadow relative">
             <Quote className="absolute top-6 right-8 text-gray-100 dark:text-muted/30 h-12 w-12" />
             <div className="flex items-center gap-4 mb-6">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
               <img src={t.image} alt={t.name} className="w-12 h-12 rounded-full bg-gray-100 dark:bg-muted" />
               <div>
                 <h4 className="font-bold text-foreground leading-none">{t.name}</h4>
@@ -41,7 +42,7 @@ export default function Testimonials() {
               </div>
             </div>
             <p className="text-sm text-muted-foreground italic leading-relaxed">
-              "{t.text}"
+              &quot;{t.text}&quot;
             </p>
           </div>
         ))}

@@ -6,7 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "next lint"
   },
   "dependencies": {
     "class-variance-authority": "^0.7.1",
@@ -29,9 +29,15 @@
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
-    "eslint": "^9",
-    "eslint-config-next": "16.2.4",
+    "eslint": "^9.39.4",
+    "eslint-config-next": "^16.3.0-preview.0",
+    "eslint-plugin-react": "^7.37.5",
+    "levn": "^0.4.1",
+    "lodash.merge": "^4.6.2",
+    "object.entries": "^1.1.9",
+    "resolve": "^1.22.12",
     "tailwindcss": "^4",
-    "typescript": "^5"
+    "typescript": "^5",
+    "uri-js": "^4.4.1"
   }
 }
